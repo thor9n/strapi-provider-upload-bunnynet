@@ -1,6 +1,6 @@
 # strapi-provider-upload-bunnycdn
 
-Bunny.net Upload Provider for Strapi. Fork from (https://github.com/laukatu/strapi-provider-upload-bunnycdn) to fix support for Strapi V4.
+Bunny.net Upload Provider for Strapi V4.
 
 ## Configurations
 
@@ -21,10 +21,6 @@ module.exports = ({ env }) => ({
         storage_zone: process.env.BUNNY_STORAGE_ZONE,
         pull_zone: process.env.BUNNY_PULL_ZONE,
       },
-    },
-    actionOptions: {
-      upload: {},
-      delete: {},
     },
   },
   //...
