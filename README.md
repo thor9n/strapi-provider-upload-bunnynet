@@ -1,6 +1,6 @@
 # strapi-provider-upload-bunnycdn
 
-BunnyCDN Upload Provider for Strapi. Fork from (https://github.com/laukatu/strapi-provider-upload-bunnycdn) to fix support for Strapi V4.
+Bunny.net Upload Provider for Strapi. Fork from (https://github.com/laukatu/strapi-provider-upload-bunnycdn) to fix support for Strapi V4.
 
 ## Configurations
 
@@ -17,10 +17,10 @@ module.exports = ({ env }) => ({
     config: {
       provider: "strapi-provider-upload-bunnynet",
       providerOptions: {
-        region: env("BUNNYCDN_HOST"),
-        apiKey: env("BUNNYCDN_API_KEY"),
-        storageZone: env("BUNNYCDN_STORAGE_ZONE"),
-        pullZone: env("BUNNYCDN_PULL_ZONE"),
+        region: process.env.BUNNY_HOST,
+        apiKey: process.env.BUNNY_API_KEY,
+        storageZone: process.env.BUNNY_STORAGE_ZONE,
+        pullZone: process.env.BUNNY_PULL_ZONE,
       },
     },
     actionOptions: {
@@ -35,10 +35,10 @@ module.exports = ({ env }) => ({
 `.env`
 
 ```
-BUNNYCDN_HOST: Storage primary Hostname (Inside FTP & API Access).
-BUNNYCDN_API_KEY: Storage Password (Inside FTP & API Access).
-BUNNYCDN_STORAGE_ZONE: Storage Zone name.
-BUNNYCDN_PULL_ZONE: Pull Zone name.
+BUNNY_HOST: Storage primary Hostname (Inside FTP & API Access).
+BUNNY_API_KEY: Storage Password (Inside FTP & API Access).
+BUNNY_STORAGE_ZONE: Storage Zone name.
+BUNNY_PULL_ZONE: Pull Zone name.
 ```
 
 ### Security Middleware Configuration
@@ -57,8 +57,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "dl.airtable.com", env("BUNNYCDN_HOST"), env("BUNNYCDN_PULL_ZONE")],
-          "media-src": ["'self'", "data:", "blob:", "dl.airtable.com", env("BUNNYCDN_HOST"), env("BUNNYCDN_PULL_ZONE")],
+          "img-src": ["'self'", "data:", "blob:", "dl.airtable.com", process.env.BUNNY_HOST, process.env.BUNNY_PULL_ZONE],
+          "media-src": ["'self'", "data:", "blob:", "dl.airtable.com", process.env.BUNNY_HOST, process.env.BUNNY_PULL_ZONE],
           upgradeInsecureRequests: null,
         },
       },
