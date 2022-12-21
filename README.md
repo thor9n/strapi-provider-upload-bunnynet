@@ -17,7 +17,6 @@ module.exports = ({ env }) => ({
     config: {
       provider: "strapi-provider-upload-bunnynet",
       providerOptions: {
-        region: process.env.BUNNY_HOST,
         api_key: process.env.BUNNY_API_KEY,
         storage_zone: process.env.BUNNY_STORAGE_ZONE,
         pull_zone: process.env.BUNNY_PULL_ZONE,
@@ -35,7 +34,6 @@ module.exports = ({ env }) => ({
 `.env`
 
 ```
-BUNNY_HOST: Storage primary Hostname (Inside FTP & API Access).
 BUNNY_API_KEY: Storage Password (Inside FTP & API Access).
 BUNNY_STORAGE_ZONE: Storage Zone name.
 BUNNY_PULL_ZONE: Pull Zone name.
@@ -57,8 +55,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "dl.airtable.com", process.env.BUNNY_HOST, process.env.BUNNY_PULL_ZONE],
-          "media-src": ["'self'", "data:", "blob:", "dl.airtable.com", process.env.BUNNY_HOST, process.env.BUNNY_PULL_ZONE],
+          "img-src": ["'self'", "data:", "blob:", process.env.BUNNY_PULL_ZONE],
+          "media-src": ["'self'", "data:", "blob:", process.env.BUNNY_PULL_ZONE],
           upgradeInsecureRequests: null,
         },
       },
