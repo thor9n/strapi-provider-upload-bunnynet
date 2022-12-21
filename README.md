@@ -1,4 +1,4 @@
-# strapi-provider-upload-bunnycdn
+# strapi-provider-upload-bunnynet
 
 Bunny.net Upload Provider for Strapi V4.
 

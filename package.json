@@ -16,7 +16,6 @@
     "provider",
     "storage",
     "bunny.net",
-    "bunnyCDN",
     "cdn"
   ],
   "strapi": {
