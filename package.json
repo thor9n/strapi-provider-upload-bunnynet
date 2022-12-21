@@ -1,0 +1,38 @@
+{
+  "name": "strapi-provider-upload-bunnynet",
+  "version": "1.0.0",
+  "description": "Bunny.net provider for Strapi upload",
+  "main": "./lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thor9n/strapi-provider-upload-bunnynet.git"
+  },
+  "keywords": [
+    "strapi",
+    "upload",
+    "provider",
+    "storage",
+    "bunny.net",
+    "bunnyCDN",
+    "cdn"
+  ],
+  "strapi": {
+    "isProvider": true
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "author": {
+    "email": "niklas@crisby.co",
+    "name": "Nick Thorin",
+    "url": "https://crisby.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thor9n/strapi-provider-upload-bunnynet/issues"
+  },
+  "homepage": "https://github.com/thor9n/strapi-provider-upload-bunnynet#readme"
+}
