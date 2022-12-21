@@ -18,9 +18,9 @@ module.exports = ({ env }) => ({
       provider: "strapi-provider-upload-bunnynet",
       providerOptions: {
         region: process.env.BUNNY_HOST,
-        apiKey: process.env.BUNNY_API_KEY,
-        storageZone: process.env.BUNNY_STORAGE_ZONE,
-        pullZone: process.env.BUNNY_PULL_ZONE,
+        api_key: process.env.BUNNY_API_KEY,
+        storage_zone: process.env.BUNNY_STORAGE_ZONE,
+        pull_zone: process.env.BUNNY_PULL_ZONE,
       },
     },
     actionOptions: {
