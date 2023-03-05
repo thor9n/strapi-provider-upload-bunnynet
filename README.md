@@ -32,8 +32,10 @@ module.exports = ({ env }) => ({
 ```
 BUNNY_API_KEY: Storage Password (Inside FTP & API Access).
 BUNNY_STORAGE_ZONE: Storage Zone name.
-BUNNY_PULL_ZONE: Pull Zone name.
+BUNNY_PULL_ZONE: Pull Zone URL.
 ```
+
+Enter Pull Zone URL without trailing slash – `https://<pull-zone-name>.b-cdn.net`.
 
 ### Security Middleware Configuration
 
