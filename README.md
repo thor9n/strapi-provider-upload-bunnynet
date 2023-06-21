@@ -39,7 +39,7 @@ BUNNY_STORAGE_ENDPOINT: Storage Endpoint Url (optional)
 BUNNY_PULL_ZONE: Pull Zone URL.
 ```
 
-Enter Pull Zone URL without trailing slash – `https://<pull-zone-name>.b-cdn.net`.\_\_
+Enter Pull Zone URL without trailing slash – `https://<pull-zone-name>.b-cdn.net`.\
 Optionally add Storage Endpoint Url without trailing slash ([read more](https://docs.bunny.net/reference/storage-api#storage-endpoints))
 
 ### Security Middleware Configuration
