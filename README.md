@@ -17,9 +17,12 @@ module.exports = ({ env }) => ({
     config: {
       provider: "strapi-provider-upload-bunnynet",
       providerOptions: {
-        api_key: process.env.BUNNY_API_KEY,
-        storage_zone: process.env.BUNNY_STORAGE_ZONE,
-        pull_zone: process.env.BUNNY_PULL_ZONE,
+        api_key: env("BUNNY_API_KEY"),
+        storage_zone: env("BUNNY_STORAGE_ZONE"),
+        pull_zone: env("BUNNY_PULL_ZONE"),
+
+        // optional:
+        // storage_endpoint: env("BUNNY_STORAGE_ZONE"),
       },
     },
   },
@@ -32,10 +35,12 @@ module.exports = ({ env }) => ({
 ```
 BUNNY_API_KEY: Storage Password (Inside FTP & API Access).
 BUNNY_STORAGE_ZONE: Storage Zone name.
+BUNNY_STORAGE_ENDPOINT: Storage Endpoint Url (optional)
 BUNNY_PULL_ZONE: Pull Zone URL.
 ```
 
-Enter Pull Zone URL without trailing slash – `https://<pull-zone-name>.b-cdn.net`.
+Enter Pull Zone URL without trailing slash – `https://<pull-zone-name>.b-cdn.net`.\
+Optionally add Storage Endpoint Url without trailing slash ([read more](https://docs.bunny.net/reference/storage-api#storage-endpoints))
 
 ### Security Middleware Configuration
 
